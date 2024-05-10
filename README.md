@@ -173,9 +173,11 @@ https://engineeringxpert.com/wp-content/uploads/2022/04/26.png
 
 
 ## STM 32 CUBE PROGRAM :
+Developed by : R Anirudh
+
+Reg No: 212223230016
 
 lcd.h
-
 ````
 #ifndef LCD_H_
 #define LCD_H_
@@ -267,9 +269,8 @@ void Lcd_define_char(Lcd_HandleTypeDef * lcd, uint8_t code, uint8_t bitmap[]);
 void Lcd_clear(Lcd_HandleTypeDef * lcd);
 
 #endif /* LCD_H_ */
-````
 main.h
-````
+
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
@@ -338,11 +339,8 @@ void Error_Handler(void);
 #endif
 
 #endif /* __MAIN_H */
-````
-
 lcd.c
 
-````
 
 // *  Created on: 10/04/2023
  //
@@ -511,11 +509,9 @@ void lcd_write(Lcd_HandleTypeDef * lcd, uint8_t data, uint8_t len)
 	DELAY(1);
 	HAL_GPIO_WritePin(lcd->en_port, lcd->en_pin, 0);
 }
-````
-
 main.c
 
-````/* USER CODE BEGIN Header */
+/* USER CODE BEGIN Header */
 /**
   ******************************************************************************
   * @file           : main.c
@@ -614,7 +610,7 @@ int main(void)
   Lcd_HandleTypeDef lcd;
   lcd = Lcd_create(ports, pins, GPIOB, GPIO_PIN_0, GPIOB, GPIO_PIN_1, LCD_4_BIT_MODE);
   Lcd_cursor(&lcd, 0,1);
-  Lcd_string(&lcd, "karthiga M");
+  Lcd_string(&lcd, " P.Keerthana");
 
   while (1)
   {
@@ -743,13 +739,18 @@ void assert_failed(uint8_t *file, uint32_t line)
 
 
 
+
+
 ## Output screen shots of proteus  :
 
+![Screenshot 2024-05-10 194740](https://github.com/anushanirudh/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/151725737/6fb5e111-5b92-4279-9026-b563a8c47f39)
 
  
  
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
  
+ ![Screenshot 2024-05-10 194826](https://github.com/anushanirudh/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/151725737/b09db282-667d-44bf-b2fc-5e80b2c96d9f)
+
  
 ## Result :
 Interfacing a lcd display with ARM microcontroller are simulated in proteus and the results are verified.
